@@ -1,0 +1,24 @@
+<form action="/movies/create" method="post">
+
+<div>
+    <label for="Title">Title:</label>
+    <input type="text" name="title">
+</div>
+
+<div>
+    <label for="Occupation">Occupation</label>
+    <input type="text" name="genre">
+</div>
+<div>
+<label for="plot">Plot</label>
+<textarea name="plot" id="plot" cols="30" rows="10"></textarea>
+</div>
+<div>
+    <select name="cast" id="" multiple>
+        {{#each allCelebs}}
+        <option value="{{_id}}">{{name}}</option>
+        {{/each}}
+    </select>
+</div>
+<button>Submit</button>
+</form>
