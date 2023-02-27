@@ -32,12 +32,12 @@ router.get('/', async (req, res, next) => {
         next(error)
     }
 })
-router.get('/', async (req, res, next) => {
-    try {
-        const allMovies = await Movie.find().populate('cast')
-        res.render('movies/movies', { allMovies })
-    } catch (error) {
+// router.get('/', async (req, res, next) => {
+//     try {
+//         const allMovies = await Movie.find().populate('cast')
+//         res.render('movies/movies', { allMovies })
+//     } catch (error) {
 
-    }
-})
+//     }
+// })
 module.exports = router;
